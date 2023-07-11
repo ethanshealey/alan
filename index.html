@@ -110,12 +110,17 @@
 
         <script>
             (() => {
-                const alan = document.getElementById('alan-img')
-                alan.style.display = 'block'
-                const num = Math.floor(Math.random() * 81)
-                alan.src = './photos/' + num + '.jpg'
+                const changeImage = () => {
+                    const alan = document.getElementById('alan-img')
+                    alan.style.display = 'block'
+                    const rnum = Math.floor(Math.random() * 81)
+                    alan.src = './photos/' + rnum + '.jpg'
+                }
+
+                changeImage()
+
                 document.getElementById('reload').addEventListener('click', () => {
-                    window.location.reload()
+                    changeImage()
                 })
             })()
         </script>
